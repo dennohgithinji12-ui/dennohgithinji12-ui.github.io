@@ -59,7 +59,7 @@
     <div class="nav-actions">
       <!-- Quick Phone / WhatsApp Pill -->
       <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20am%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project."
-        target="_blank" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
+        target="_blank" rel="noopener noreferrer" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
         💬 +254 728 458468
       </a>
 
@@ -499,7 +499,7 @@
 
           <div style="display: flex; gap: 0.85rem; flex-wrap: wrap; margin-bottom: 1rem;">
             <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya."
-              target="_blank" class="btn-whatsapp">
+              target="_blank" rel="noopener noreferrer" class="btn-whatsapp" title="WhatsApp Raphael">
               <span>💬 WhatsApp Raphael</span>
             </a>
             <a href="tel:+254728458468" class="btn-secondary"
@@ -574,7 +574,7 @@
                 <span class="value-pill" id="sqft-range-val">5,500 sq ft</span>
               </div>
               <input type="range" min="2500" max="12000" step="250" value="5500" class="custom-range"
-                id="sqft-range-input">
+                id="sqft-range-input" title="Planned Living Area in Square Feet" aria-label="Planned Living Area in Square Feet">
               <div
                 style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; font-family: var(--font-mono);">
                 <span>2,500 sq ft</span>
@@ -969,10 +969,10 @@
             <span>💬</span>
             <span><a
                 href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya."
-                target="_blank" style="color: #25D366; font-weight: 600;">Chat on WhatsApp (+254 728 458468)</a></span>
+                target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 600;" title="Chat on WhatsApp">Chat on WhatsApp (+254 728 458468)</a></span>
           </div>
           <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya."
-            target="_blank" class="btn-whatsapp" style="margin-top: 1rem; width: 100%; justify-content: center;">
+            target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="margin-top: 1rem; width: 100%; justify-content: center;" title="WhatsApp Raphael Now">
             💬 WhatsApp Raphael Now
           </a>
         </div>
@@ -1000,7 +1000,7 @@
         <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
           <a href="tel:+254728458468" class="phone-quick-link">📞 Call: +254 728 458468</a>
           <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya."
-            target="_blank" class="phone-quick-link" style="color: #25D366; border-color: rgba(37,211,102,0.4);">💬
+            target="_blank" rel="noopener noreferrer" class="phone-quick-link" style="color: #25D366; border-color: rgba(37,211,102,0.4);" title="WhatsApp Raphael">💬
             WhatsApp: +254 728 458468</a>
         </div>
       </div>
@@ -1008,23 +1008,23 @@
       <form id="consultation-form">
         <div class="form-grid-2">
           <div class="form-group">
-            <label class="form-label">Full Name *</label>
-            <input type="text" class="form-input" required placeholder="e.g. David Mwangi">
+            <label for="consult-name" class="form-label">Full Name *</label>
+            <input type="text" id="consult-name" name="full_name" class="form-input" required placeholder="e.g. David Mwangi" title="Full Name" aria-label="Full Name">
           </div>
           <div class="form-group">
-            <label class="form-label">Email Address *</label>
-            <input type="email" class="form-input" required placeholder="david@domain.com">
+            <label for="consult-email" class="form-label">Email Address *</label>
+            <input type="email" id="consult-email" name="email" class="form-input" required placeholder="david@domain.com" title="Email Address" aria-label="Email Address">
           </div>
         </div>
 
         <div class="form-grid-2">
           <div class="form-group">
-            <label class="form-label">Phone Number *</label>
-            <input type="tel" class="form-input" required placeholder="+254 700 000000">
+            <label for="consult-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="consult-phone" name="phone" class="form-input" required placeholder="+254 700 000000" title="Phone Number" aria-label="Phone Number">
           </div>
           <div class="form-group">
-            <label class="form-label">Project Scope</label>
-            <select class="form-select" id="modal-project-type">
+            <label for="modal-project-type" class="form-label">Project Scope</label>
+            <select class="form-select" id="modal-project-type" name="project_scope" title="Project Scope" aria-label="Project Scope">
               <option value="land_and_build">Scout & Buy Land in Kenya + Full Turnkey Build</option>
               <option value="build_only">Build on Plot I Already Own in Kenya</option>
               <option value="land_only">Raw Land Sourcing & Title Due Diligence Only</option>
@@ -1034,8 +1034,8 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Estimated Budget Range (KSh)</label>
-          <select class="form-select">
+          <label for="modal-budget-range" class="form-label">Estimated Budget Range (KSh)</label>
+          <select class="form-select" id="modal-budget-range" name="budget_range" title="Estimated Budget Range (KSh)" aria-label="Estimated Budget Range (KSh)">
             <option>KSh 30,000,000 – KSh 60,000,000</option>
             <option selected>KSh 60,000,000 – KSh 120,000,000</option>
             <option>KSh 120,000,000 – KSh 350,000,000+</option>
@@ -1043,8 +1043,8 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Project Vision & Estimator Notes</label>
-          <textarea class="form-textarea" rows="4" id="modal-notes-input"
+          <label for="modal-notes-input" class="form-label">Project Vision & Estimator Notes</label>
+          <textarea class="form-textarea" rows="4" id="modal-notes-input" name="project_vision" title="Project Vision & Estimator Notes" aria-label="Project Vision & Estimator Notes"
             placeholder="Tell Raphael about desired locations (e.g. Karen, Tigoni, Diani, Naivasha), architectural preferences, or land status..."></textarea>
         </div>
 

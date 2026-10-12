@@ -39,7 +39,7 @@
     </nav>
 
     <div class="nav-actions">
-      <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20using%20the%20cost%20estimator%20and%20would%20like%20to%20review%20my%20projection." target="_blank" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
+      <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20using%20the%20cost%20estimator%20and%20would%20like%20to%20review%20my%20projection." target="_blank" rel="noopener noreferrer" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
         💬 +254 728 458468
       </a>
       <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">🔊</button>
@@ -116,7 +116,7 @@
                 <span>3. Planned Living Area</span>
                 <span class="value-pill" id="sqft-range-val">3,500 sq ft</span>
               </div>
-              <input type="range" min="1000" max="12000" step="250" value="3500" class="custom-range" id="sqft-range-input">
+              <input type="range" min="1000" max="12000" step="250" value="3500" class="custom-range" id="sqft-range-input" title="Planned Living Area in Square Feet" aria-label="Planned Living Area in Square Feet">
               <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; font-family: var(--font-mono);">
                 <span>1,000 sq ft (~93 sqm)</span>
                 <span>3,500 sq ft (~325 sqm)</span>
@@ -184,7 +184,7 @@
               <button class="btn-primary" id="btn-export-spec" style="width: 100%; justify-content: center;">
                 Lock In Specification with Raphael
               </button>
-              <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20have%20run%20the%20cost%20estimator%20for%20my%20build%20in%20Kenya%20and%20want%20to%20discuss%20the%20numbers." target="_blank" class="btn-whatsapp" style="width: 100%; justify-content: center;">
+              <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20have%20run%20the%20cost%20estimator%20for%20my%20build%20in%20Kenya%20and%20want%20to%20discuss%20the%20numbers." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="width: 100%; justify-content: center;" title="Send Calculation to Raphael on WhatsApp">
                 💬 Send Calculation to WhatsApp (+254 728 458468)
               </a>
             </div>
@@ -249,23 +249,23 @@
       <form id="consultation-form">
         <div class="form-grid-2">
           <div class="form-group">
-            <label class="form-label">Full Name *</label>
-            <input type="text" class="form-input" required placeholder="e.g. David Mwangi">
+            <label for="modal-full-name" class="form-label">Full Name *</label>
+            <input type="text" id="modal-full-name" name="full_name" class="form-input" required placeholder="e.g. David Mwangi" title="Full Name" aria-label="Full Name">
           </div>
           <div class="form-group">
-            <label class="form-label">Email Address *</label>
-            <input type="email" class="form-input" required placeholder="david@domain.com">
+            <label for="modal-email-addr" class="form-label">Email Address *</label>
+            <input type="email" id="modal-email-addr" name="email" class="form-input" required placeholder="david@domain.com" title="Email Address" aria-label="Email Address">
           </div>
         </div>
 
         <div class="form-grid-2">
           <div class="form-group">
-            <label class="form-label">Phone Number *</label>
-            <input type="tel" class="form-input" required placeholder="+254 700 000000">
+            <label for="modal-phone-num" class="form-label">Phone Number *</label>
+            <input type="tel" id="modal-phone-num" name="phone" class="form-input" required placeholder="+254 700 000000" title="Phone Number" aria-label="Phone Number">
           </div>
           <div class="form-group">
-            <label class="form-label">Project Scope</label>
-            <select class="form-select" id="modal-project-type">
+            <label for="modal-project-type" class="form-label">Project Scope</label>
+            <select class="form-select" id="modal-project-type" name="project_type" title="Project Scope" aria-label="Project Scope">
               <option value="land_and_build">Scout & Buy Land in Kenya + Full Turnkey Build</option>
               <option value="build_only">Build on Plot I Already Own in Kenya</option>
             </select>
@@ -273,8 +273,8 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Estimator Specification Notes</label>
-          <textarea class="form-textarea" rows="4" id="modal-notes-input"></textarea>
+          <label for="modal-notes-input" class="form-label">Estimator Specification Notes</label>
+          <textarea class="form-textarea" rows="4" id="modal-notes-input" name="notes" placeholder="Additional details or specific locations in Kenya..." title="Estimator Specification Notes" aria-label="Estimator Specification Notes"></textarea>
         </div>
 
         <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">

@@ -39,7 +39,7 @@
     </nav>
 
     <div class="nav-actions">
-      <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20am%20calling%20regarding%20a%20turnkey%20construction%20project%20in%20Kenya." target="_blank" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
+      <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20am%20calling%20regarding%20a%20turnkey%20construction%20project%20in%20Kenya." target="_blank" rel="noopener noreferrer" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
         💬 +254 728 458468
       </a>
       <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">🔊</button>
@@ -84,7 +84,7 @@
             <div class="contact-item-icon">💬</div>
             <div>
               <h5 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.2rem;">Direct WhatsApp Hotline</h5>
-              <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20would%20like%20to%20discuss%20a%20project%20in%20Kenya." target="_blank" style="color: #25D366; font-weight: 700; font-family: var(--font-mono); font-size: 1.05rem;">
+              <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20would%20like%20to%20discuss%20a%20project%20in%20Kenya." target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 700; font-family: var(--font-mono); font-size: 1.05rem;" title="Chat with Raphael on WhatsApp">
                 +254 728 458468
               </a>
               <p style="font-size: 0.78rem; color: var(--text-dim); margin-top: 0.2rem;">Immediate response on WhatsApp for diaspora and local clients.</p>
@@ -140,23 +140,23 @@
           <form id="contact-page-form">
             <div class="form-grid-2">
               <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-input" required placeholder="e.g. Grace Wanjiku">
+                <label for="contact-full-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-full-name" name="full_name" class="form-input" required placeholder="e.g. Grace Wanjiku" title="Full Name" aria-label="Full Name">
               </div>
               <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-input" required placeholder="grace@domain.com">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" required placeholder="grace@domain.com" title="Email Address" aria-label="Email Address">
               </div>
             </div>
 
             <div class="form-grid-2">
               <div class="form-group">
-                <label class="form-label">Phone Number / WhatsApp *</label>
-                <input type="tel" class="form-input" required placeholder="+254 700 000000">
+                <label for="contact-phone" class="form-label">Phone Number / WhatsApp *</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-input" required placeholder="+254 700 000000" title="Phone Number or WhatsApp" aria-label="Phone Number or WhatsApp">
               </div>
               <div class="form-group">
-                <label class="form-label">Target Location in Kenya</label>
-                <select class="form-select">
+                <label for="contact-target-location" class="form-label">Target Location in Kenya</label>
+                <select id="contact-target-location" name="target_location" class="form-select" title="Target Location in Kenya" aria-label="Target Location in Kenya">
                   <option>Karen / Muthaiga (Nairobi)</option>
                   <option>Tigoni / Runda (Kiambu)</option>
                   <option>Diani Beach / Kilifi Coast</option>
@@ -168,8 +168,8 @@
 
             <div class="form-grid-2">
               <div class="form-group">
-                <label class="form-label">Project Scope</label>
-                <select class="form-select">
+                <label for="contact-project-scope" class="form-label">Project Scope</label>
+                <select id="contact-project-scope" name="project_scope" class="form-select" title="Project Scope" aria-label="Project Scope">
                   <option>Scout & Buy Land + Full Turnkey Build</option>
                   <option>Build on Plot I Already Own in Kenya</option>
                   <option>Raw Land Sourcing & Due Diligence Only</option>
@@ -177,8 +177,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label">Estimated Budget (KSh)</label>
-                <select class="form-select">
+                <label for="contact-budget-range" class="form-label">Estimated Budget (KSh)</label>
+                <select id="contact-budget-range" name="budget_range" class="form-select" title="Estimated Budget (KSh)" aria-label="Estimated Budget (KSh)">
                   <option>KSh 30,000,000 – KSh 60,000,000</option>
                   <option selected>KSh 60,000,000 – KSh 120,000,000</option>
                   <option>KSh 120,000,000 – KSh 350,000,000+</option>
@@ -187,8 +187,8 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Project Vision & Timeline</label>
-              <textarea class="form-textarea" rows="4" placeholder="Tell Raphael about desired architectural styles, family requirements, or specific parcel criteria..."></textarea>
+              <label for="contact-vision" class="form-label">Project Vision & Timeline</label>
+              <textarea id="contact-vision" name="vision" class="form-textarea" rows="4" placeholder="Tell Raphael about desired architectural styles, family requirements, or specific parcel criteria..." title="Project Vision & Timeline" aria-label="Project Vision & Timeline"></textarea>
             </div>
 
             <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">
