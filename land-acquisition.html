@@ -6,6 +6,8 @@
   <title>Kenya Land Scouting & Acquisition | Terraform & Craft • Raphael Kamau</title>
   <meta name="description" content="We scout, verify, and acquire prime residential and commercial land for clients across Kenya. Ministry of Lands Ardhisasa searches, beacon surveys, and red-soil geotechnical tests.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,6 +44,11 @@
       </a>
       <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">🔊</button>
       <a href="contact.html" class="btn-primary">Book Raphael</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -60,6 +67,18 @@
       <p class="subpage-desc">
         Buying land in Kenya shouldn't be high-risk or stressful. Raphael Kamau leads end-to-end due diligence — from Ministry of Lands Ardhisasa verification to red-soil geotechnical tests and off-market negotiation — ensuring your capital is protected before a shovel touches the dirt.
       </p>
+
+      <!-- Responsive Terrain & Land Scouting Visual -->
+      <div style="margin-top: 2rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-gold); box-shadow: var(--shadow-3d); max-width: 1000px; aspect-ratio: 16 / 8;">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/land-acquisition-480w.webp 480w,
+                    assets/images/land-acquisition-800w.webp 800w,
+                    assets/images/land-acquisition.webp 1376w"
+            sizes="(max-width: 768px) 100vw, 1000px">
+          <img src="assets/images/land-acquisition.jpg" alt="Drone Land Survey and Topographical Inspection in Kenya" width="1376" height="768" style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high" loading="eager" decoding="async">
+        </picture>
+      </div>
     </div>
   </section>
 

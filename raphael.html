@@ -6,6 +6,8 @@
   <title>Raphael Kamau | Lead Project Manager & Master Builder (Kenya)</title>
   <meta name="description" content="Personal portfolio of Eng. Raphael Kamau (PMP, EBK, NCA 1). Lead Project Manager and Master Builder delivering turnkey luxury architectural construction and land acquisition in Kenya.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👷‍♂️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,6 +44,11 @@
       </a>
       <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">🔊</button>
       <a href="contact.html" class="btn-primary">Book Raphael</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -71,7 +78,14 @@
         <!-- Left: Portrait with 3D Tilt -->
         <div class="pm-portrait-container">
           <div class="pm-3d-tilt-frame tilt-3d">
-            <img src="assets/images/raphael-pm.jpg" alt="Eng. Raphael Kamau - Lead Project Manager">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/raphael-pm-480w.webp 480w,
+                        assets/images/raphael-pm-800w.webp 800w,
+                        assets/images/raphael-pm.webp 1024w"
+                sizes="(max-width: 768px) 100vw, 550px">
+              <img src="assets/images/raphael-pm.jpg" alt="Eng. Raphael Kamau - Lead Project Manager" width="1024" height="1024" fetchpriority="high" loading="eager" decoding="async">
+            </picture>
             
             <div class="pm-live-status">
               <span class="status-dot-active"></span>

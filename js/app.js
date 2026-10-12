@@ -140,7 +140,8 @@
       if (offsetX > rect.width) offsetX = rect.width;
 
       const percentage = (offsetX / rect.width) * 100;
-      afterLayer.style.width = `${percentage}%`;
+      afterLayer.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+      afterLayer.style.width = '100%';
       handle.style.left = `${percentage}%`;
     }
 
@@ -165,6 +166,31 @@
       if (!isDragging || !e.touches[0]) return;
       updateSliderPos(e.touches[0].clientX);
     }, { passive: true });
+  }
+
+  // ==========================================================================
+  // MOBILE NAVIGATION DRAWER TOGGLE
+  // ==========================================================================
+  function initMobileNav() {
+    const toggle = document.getElementById('mobile-nav-toggle');
+    const header = document.querySelector('.header-nav');
+    if (!toggle || !header) return;
+
+    toggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('mobile-menu-open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+      if (window.playSfx) window.playSfx('click');
+    });
+
+    // Close when clicking nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('mobile-menu-open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // ==========================================================================
@@ -485,6 +511,7 @@
   // INITIALIZE ON DOM READY
   // ==========================================================================
   document.addEventListener('DOMContentLoaded', () => {
+    initMobileNav();
     init3DTilt();
     initSplitSlider();
     initEstimator();

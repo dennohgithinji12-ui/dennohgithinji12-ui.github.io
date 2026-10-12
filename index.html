@@ -10,12 +10,22 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
 
+  <!-- Resource Preconnects for Fast Load Time -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/images/plan-to-finish-480w.webp" type="image/webp" media="(max-width: 640px)">
+  <link rel="preload" as="image" href="assets/images/plan-to-finish.webp" type="image/webp" media="(min-width: 641px)">
+
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Three.js & OrbitControls from CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Three.js & OrbitControls from CDN (Deferred to prioritize visual FCP) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
 </head>
 
 <body>
@@ -35,12 +45,12 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link active-page">Home</a></li>
+        <li><a href="market-scan.html" class="nav-link">Market Scan & Rates</a></li>
         <li><a href="land-acquisition.html" class="nav-link">Land Scouting</a></li>
         <li><a href="services.html" class="nav-link">The 5 Phases</a></li>
         <li><a href="#lab" class="nav-link">3D Lab</a></li>
         <li><a href="estimator.html" class="nav-link">Cost Estimator</a></li>
-        <li><a href="projects.html" class="nav-link">Projects< /a>
-        </li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
         <li><a href="raphael.html" class="nav-link">Raphael Kamau</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -60,6 +70,13 @@
 
       <button class="btn-primary open-consultation-trigger">
         Book Raphael
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
       </button>
     </div>
   </header>
@@ -128,8 +145,17 @@
         <div class="hero-visual-col">
           <div class="hero-3d-card tilt-3d">
             <div class="hero-img-box">
-              <img src="assets/images/plan-to-finish.jpg"
-                alt="From 3D Blueprint to Finished Luxury Architecture in Kenya" fetchpriority="high">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/plan-to-finish-480w.webp 480w,
+                          assets/images/plan-to-finish-800w.webp 800w,
+                          assets/images/plan-to-finish.webp 1376w"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px">
+                <img src="assets/images/plan-to-finish.jpg"
+                  alt="From 3D Blueprint to Finished Luxury Architecture in Kenya"
+                  width="1376" height="768"
+                  fetchpriority="high" loading="eager" decoding="async">
+              </picture>
               <div class="hero-overlay-grid"></div>
 
               <div class="hero-floating-badge">
@@ -151,7 +177,13 @@
 
           <!-- Floating Raphael Lead PM Chip -->
           <div class="floating-pm-avatar-chip">
-            <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau Lead PM" class="floating-avatar-img">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/raphael-pm-480w.webp 480w,
+                        assets/images/raphael-pm.webp 1024w"
+                sizes="44px">
+              <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau Lead PM" class="floating-avatar-img" width="44" height="44" loading="eager" decoding="async">
+            </picture>
             <div class="floating-avatar-text">
               <h5>Raphael Kamau</h5>
               <span>Lead PM • On-Site Director (Kenya)</span>
@@ -349,12 +381,26 @@
       <div class="split-slider-wrapper" id="split-slider-container">
         <!-- Before: Structural & Blueprint -->
         <div class="split-img-layer before">
-          <img src="assets/images/plan-to-finish.jpg" alt="3D Blueprint and Framing Stage">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/plan-to-finish-480w.webp 480w,
+                      assets/images/plan-to-finish-800w.webp 800w,
+                      assets/images/plan-to-finish.webp 1376w"
+              sizes="(max-width: 768px) 100vw, 1100px">
+            <img src="assets/images/plan-to-finish.jpg" alt="3D Blueprint and Framing Stage" width="1376" height="768" loading="lazy" decoding="async">
+          </picture>
         </div>
 
         <!-- After: Completed Luxury Villa -->
         <div class="split-img-layer after" id="split-after-layer">
-          <img src="assets/images/luxury-villa.jpg" alt="Finished Completed Luxury Villa">
+          <picture>
+            <source type="image/webp"
+              srcset="assets/images/luxury-villa-480w.webp 480w,
+                      assets/images/luxury-villa-800w.webp 800w,
+                      assets/images/luxury-villa.webp 1376w"
+              sizes="(max-width: 768px) 100vw, 1100px">
+            <img src="assets/images/luxury-villa.jpg" alt="Finished Completed Luxury Villa" width="1376" height="768" loading="lazy" decoding="async">
+          </picture>
         </div>
 
         <!-- Drag Handle -->
@@ -378,7 +424,14 @@
         <!-- Left: Portrait with 3D Tilt -->
         <div class="pm-portrait-container">
           <div class="pm-3d-tilt-frame tilt-3d">
-            <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau - Lead Project Manager">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/raphael-pm-480w.webp 480w,
+                        assets/images/raphael-pm-800w.webp 800w,
+                        assets/images/raphael-pm.webp 1024w"
+                sizes="(max-width: 768px) 100vw, 550px">
+              <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau - Lead Project Manager" width="1024" height="1024" loading="lazy" decoding="async">
+            </picture>
 
             <div class="pm-live-status">
               <span class="status-dot-active"></span>
@@ -621,7 +674,14 @@
         <!-- Project 1 -->
         <div class="project-card tilt-3d" data-category="coastal hillside" data-project-id="solstice">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/luxury-villa.jpg" alt="The Solstice Ridge Villa - Karen, Nairobi">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/luxury-villa-480w.webp 480w,
+                        assets/images/luxury-villa-800w.webp 800w,
+                        assets/images/luxury-villa.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/luxury-villa.jpg" alt="The Solstice Ridge Villa - Karen, Nairobi" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Land Acquired + Full Build</span>
           </div>
           <div class="project-content-block">
@@ -653,7 +713,14 @@
         <!-- Project 2 -->
         <div class="project-card tilt-3d" data-category="hillside" data-project-id="auracrest">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/plan-to-finish.jpg" alt="Aura Crest Sanctuary - Tigoni, Kiambu">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/plan-to-finish-480w.webp 480w,
+                        assets/images/plan-to-finish-800w.webp 800w,
+                        assets/images/plan-to-finish.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/plan-to-finish.jpg" alt="Aura Crest Sanctuary - Tigoni, Kiambu" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Volcanic Slope Cantilever</span>
           </div>
           <div class="project-content-block">
@@ -685,7 +752,14 @@
         <!-- Project 3 -->
         <div class="project-card tilt-3d" data-category="land" data-project-id="obsidian">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/land-acquisition.jpg" alt="The Obsidian Rift Estate - Naivasha">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/land-acquisition-480w.webp 480w,
+                        assets/images/land-acquisition-800w.webp 800w,
+                        assets/images/land-acquisition.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/land-acquisition.jpg" alt="The Obsidian Rift Estate - Naivasha" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">5-Acre Solar Compound</span>
           </div>
           <div class="project-content-block">
@@ -717,7 +791,14 @@
         <!-- Project 4 -->
         <div class="project-card tilt-3d" data-category="coastal" data-project-id="zephyr">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/luxury-villa.jpg" alt="Zephyr Oceanfront Pavilion - Diani Beach">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/luxury-villa-480w.webp 480w,
+                        assets/images/luxury-villa-800w.webp 800w,
+                        assets/images/luxury-villa.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/luxury-villa.jpg" alt="Zephyr Oceanfront Pavilion - Diani Beach" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Marine Foundation + Handover</span>
           </div>
           <div class="project-content-block">

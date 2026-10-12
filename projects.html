@@ -6,6 +6,8 @@
   <title>Architectural Projects Portfolio | Terraform & Craft • Raphael Kamau (Kenya)</title>
   <meta name="description" content="Explore signature turnkey residences delivered across Kenya by Raphael Kamau. From Karen luxury villas and Tigoni hillside sanctuaries to Diani beachfront pavilions.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,6 +44,11 @@
       </a>
       <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">🔊</button>
       <a href="contact.html" class="btn-primary">Book Raphael</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -81,7 +88,14 @@
         <!-- Project 1 -->
         <div class="project-card tilt-3d" data-category="coastal hillside" data-project-id="solstice">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/luxury-villa.jpg" alt="The Solstice Ridge Villa - Karen, Nairobi">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/luxury-villa-480w.webp 480w,
+                        assets/images/luxury-villa-800w.webp 800w,
+                        assets/images/luxury-villa.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/luxury-villa.jpg" alt="The Solstice Ridge Villa - Karen, Nairobi" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Karen Land Acquired + Full Build</span>
           </div>
           <div class="project-content-block">
@@ -113,7 +127,14 @@
         <!-- Project 2 -->
         <div class="project-card tilt-3d" data-category="hillside" data-project-id="auracrest">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/plan-to-finish.jpg" alt="Aura Crest Sanctuary - Tigoni, Kiambu">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/plan-to-finish-480w.webp 480w,
+                        assets/images/plan-to-finish-800w.webp 800w,
+                        assets/images/plan-to-finish.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/plan-to-finish.jpg" alt="Aura Crest Sanctuary - Tigoni, Kiambu" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Volcanic Slope Cantilever</span>
           </div>
           <div class="project-content-block">
@@ -145,7 +166,14 @@
         <!-- Project 3 -->
         <div class="project-card tilt-3d" data-category="land" data-project-id="obsidian">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/land-acquisition.jpg" alt="The Obsidian Rift Estate - Naivasha">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/land-acquisition-480w.webp 480w,
+                        assets/images/land-acquisition-800w.webp 800w,
+                        assets/images/land-acquisition.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/land-acquisition.jpg" alt="The Obsidian Rift Estate - Naivasha" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">5-Acre Solar Compound</span>
           </div>
           <div class="project-content-block">
@@ -177,7 +205,14 @@
         <!-- Project 4 -->
         <div class="project-card tilt-3d" data-category="coastal" data-project-id="zephyr">
           <div class="project-thumbnail-wrapper">
-            <img src="assets/images/luxury-villa.jpg" alt="Zephyr Oceanfront Pavilion - Diani Beach">
+            <picture>
+              <source type="image/webp"
+                srcset="assets/images/luxury-villa-480w.webp 480w,
+                        assets/images/luxury-villa-800w.webp 800w,
+                        assets/images/luxury-villa.webp 1376w"
+                sizes="(max-width: 768px) 100vw, 600px">
+              <img src="assets/images/luxury-villa.jpg" alt="Zephyr Oceanfront Pavilion - Diani Beach" width="1376" height="768" loading="lazy" decoding="async">
+            </picture>
             <span class="project-tag-pill">Marine Foundation + Handover</span>
           </div>
           <div class="project-content-block">
