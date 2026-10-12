@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERRAFORM & CRAFT | Luxury Turnkey Construction & Land Acquisition • Raphael Kamau, Lead PM (Kenya)</title>
+  <meta name="description" content="From prime Kenyan land acquisition and 3D architectural BIM blueprinting to turnkey handover in Karen, Tigoni, Diani & Naivasha. Led by Raphael Kamau, Lead Project Manager.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js & OrbitControls from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP GLASS NAVIGATION BAR
+       ======================================================================== -->
+  <header class="header-nav">
+    <div class="brand-wrapper">
+      <div class="brand-logo-cube">TC</div>
+      <div class="brand-text">
+        <span class="brand-title">TERRAFORM & CRAFT</span>
+        <span class="brand-subtitle">KENYA LAND • 3D BIM • TURNKEY BUILD</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active-page">Home</a></li>
+        <li><a href="land-acquisition.html" class="nav-link">Land Scouting</a></li>
+        <li><a href="services.html" class="nav-link">The 5 Phases</a></li>
+        <li><a href="#lab" class="nav-link">3D Lab</a></li>
+        <li><a href="estimator.html" class="nav-link">Cost Estimator</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="raphael.html" class="nav-link">Raphael Kamau</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Quick Phone / WhatsApp Pill -->
+      <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I%20am%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project." target="_blank" class="phone-quick-link" title="Chat directly with Raphael on WhatsApp">
+        💬 +254 728 458468
+      </a>
+
+      <!-- Audio UI Sound Toggle -->
+      <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Sound Feedback">
+        🔊
+      </button>
+
+      <button class="btn-primary open-consultation-trigger">
+        Book Raphael
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Text & Key Highlights -->
+        <div class="hero-text-col">
+          <div class="hero-badge-row">
+            <span class="hero-tag">Kenya Architecture & Construction</span>
+            <span class="hero-tag lead-pm-tag">Raphael Kamau • Lead Project Manager</span>
+          </div>
+
+          <h1 class="hero-title">
+            We Scout Kenyan Land.<br>
+            <span class="gradient-gold">Design the 3D Blueprint.</span><br>
+            <span class="blueprint-glow-text">Deliver the Turnkey Icon.</span>
+          </h1>
+
+          <p class="hero-description">
+            We eliminate the fragmentation of building luxury residences in Kenya. From scouting and acquiring prime parcels in Karen, Tigoni, Diani, or Naivasha to 3D BIM structural engineering and turnkey white-glove handover — led by Master Project Manager Raphael Kamau.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#lab" class="btn-primary">
+              <span>Explore 3D Build Lab</span>
+              <span style="font-size: 1.1rem;">▸</span>
+            </a>
+            <a href="#estimator" class="btn-blueprint">
+              <span>Calculate in KSh</span>
+            </a>
+            <button class="btn-secondary open-consultation-trigger">
+              <span>Direct PM Consultation</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-number">KSh 4.8B<span class="accent">+</span></span>
+              <span class="stat-label">Turnkey Delivered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100<span class="accent">%</span></span>
+              <span class="stat-label">NCA / NEMA / County Pass</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">420<span class="accent">+</span></span>
+              <span class="stat-label">Acres Acquired in Kenya</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">94</span>
+              <span class="stat-label">Keys Handed Over</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3D Visual Card & Raphael Spotlight Chip -->
+        <div class="hero-visual-col">
+          <div class="hero-3d-card tilt-3d">
+            <div class="hero-img-box">
+              <img src="assets/images/plan-to-finish.jpg" alt="From 3D Blueprint to Finished Luxury Architecture in Kenya" fetchpriority="high">
+              <div class="hero-overlay-grid"></div>
+              
+              <div class="hero-floating-badge">
+                <span class="pulse-indicator"></span>
+                <span>BIM 3D • PERMITTED • BUILT (KENYA)</span>
+              </div>
+            </div>
+
+            <div class="hero-card-meta">
+              <div class="meta-title-col">
+                <h4>Single-Contract Turnkey Journey</h4>
+                <p>Ministry of Lands due diligence, red-soil geotechnical tests & master construction</p>
+              </div>
+              <a href="#lifecycle" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">
+                See Process
+              </a>
+            </div>
+          </div>
+
+          <!-- Floating Raphael Lead PM Chip -->
+          <div class="floating-pm-avatar-chip">
+            <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau Lead PM" class="floating-avatar-img">
+            <div class="floating-avatar-text">
+              <h5>Raphael Kamau</h5>
+              <span>Lead PM • On-Site Director (Kenya)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE 3D VIRTUAL ARCHITECTURAL LAB (Three.js WebGL)
+       ======================================================================== -->
+  <section class="lab-section section-padding" id="lab">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">3D Interactive Spatial Viewer</span>
+        <h2 class="section-title">Deconstruct the Turnkey Build in 3D</h2>
+        <p class="section-subtitle">
+          Interact with a real-time architectural BIM model. Rotate, inspect structural framing, view wireframe blueprints, explore land boundaries, and click active phase pins.
+        </p>
+      </div>
+
+      <div class="lab-container" id="three-canvas-container">
+        <!-- Canvas injected by three-scene.js -->
+
+        <!-- Top HUD Controls -->
+        <div class="lab-hud-top">
+          <div class="hud-panel">
+            <span class="hud-title">CAMERA:</span>
+            <div class="hud-views-group">
+              <button class="hud-btn active" data-view="overview">3D Orbit</button>
+              <button class="hud-btn" data-view="cutaway">Cutaway</button>
+              <button class="hud-btn" data-view="aerial">Aerial Topo</button>
+            </div>
+          </div>
+
+          <div class="hud-panel">
+            <button id="hud-light-toggle" class="hud-lighting-toggle">
+              ☀️ Golden Sunset
+            </button>
+          </div>
+        </div>
+
+        <!-- Hotspot Inspection Card (Appears when 3D pins are clicked) -->
+        <div class="hotspot-info-card" id="hotspot-info-card">
+          <div class="hotspot-card-header">
+            <span class="hotspot-badge" id="hotspot-card-badge">PHASE 01 • LAND</span>
+            <span class="hotspot-close" id="hotspot-close-btn">&times;</span>
+          </div>
+          <h4 class="hotspot-card-title" id="hotspot-card-title">Zoning & Soil Test</h4>
+          <p class="hotspot-card-desc" id="hotspot-card-desc">Geotechnical drilling confirmed bedrock stability.</p>
+        </div>
+
+        <div class="canvas-hint">
+          <span>🖱️ Click & Drag to Rotate • Scroll to Zoom • Click 3D Pins to Inspect</span>
+        </div>
+
+        <!-- Bottom Layer Inspection Dock -->
+        <div class="lab-hud-bottom">
+          <button class="layer-btn active" data-mode="full">
+            <span>🏛️</span> Full Architecture
+          </button>
+          <button class="layer-btn" data-mode="framing">
+            <span>🏗️</span> Structural Steel Framing
+          </button>
+          <button class="layer-btn" data-mode="blueprint">
+            <span>📐</span> Blueprint Wireframe
+          </button>
+          <button class="layer-btn" data-mode="land">
+            <span>🌄</span> Land Parcel & Topo
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       THE 5-PHASE TURNKEY JOURNEY: LAND TO KEYS
+       ======================================================================== -->
+  <section class="stages-section section-padding" id="lifecycle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">End-to-End Methodology</span>
+        <h2 class="section-title">From Virgin Land to Turnkey Reality</h2>
+        <p class="section-subtitle">
+          Most clients juggle 5 separate contractors, architects, brokers, and surveyors. We handle every single milestone under one unified contract with Raphael's direct oversight.
+        </p>
+      </div>
+
+      <div class="journey-grid">
+        
+        <!-- Stage 1 -->
+        <div class="journey-card tilt-3d">
+          <span class="stage-number">01</span>
+          <div class="stage-icon">🌄</div>
+          <h3 class="stage-title">Land Scouting & Acquisition</h3>
+          <p class="stage-desc">
+            We locate prime off-market and listed plots, perform geotechnical soil borings, slope stability tests, title due diligence, and negotiate the purchase for you.
+          </p>
+          <div class="stage-pill-list">
+            <span class="stage-pill">Zoning & Setback Verification</span>
+            <span class="stage-pill">Percolation & Water Rights</span>
+            <span class="stage-pill">Turnkey Parcel Purchase</span>
+          </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="journey-card tilt-3d">
+          <span class="stage-number">02</span>
+          <div class="stage-icon">📐</div>
+          <h3 class="stage-title">Architectural & 3D BIM Design</h3>
+          <p class="stage-desc">
+            Bespoke architectural concept design tailored to the natural topography. Photorealistic 3D VR simulations, complete structural calculations, and expedited municipal approvals.
+          </p>
+          <div class="stage-pill-list">
+            <span class="stage-pill">3D Architectural BIM Modeling</span>
+            <span class="stage-pill">Structural Civil Engineering</span>
+            <span class="stage-pill">Municipal Permitting Expediting</span>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="journey-card tilt-3d">
+          <span class="stage-number">03</span>
+          <div class="stage-icon">🚜</div>
+          <h3 class="stage-title">Precision Earthwork & Foundation</h3>
+          <p class="stage-desc">
+            Laser-guided site excavation, reinforced retaining soldier piles, seismic foundation footings, and underground utility tie-ins overseen daily by Raphael.
+          </p>
+          <div class="stage-pill-list">
+            <span class="stage-pill">Sub-grade Rock Excavation</span>
+            <span class="stage-pill">Seismic Deep Concrete Piles</span>
+            <span class="stage-pill">Underground High-Amp Utilities</span>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="journey-card tilt-3d">
+          <span class="stage-number">04</span>
+          <div class="stage-icon">🏗️</div>
+          <h3 class="stage-title">Structural Steel & Building Envelope</h3>
+          <p class="stage-desc">
+            Erecting heavy structural steel frameworks, post-tensioned cantilevered concrete slabs, thermally-isolated acoustic glass curtain walls, and weatherproofing membranes.
+          </p>
+          <div class="stage-pill-list">
+            <span class="stage-pill">Heavy Steel & Concrete Core</span>
+            <span class="stage-pill">Triple-Pane Acoustic Glazing</span>
+            <span class="stage-pill">Passive House Insulation Seal</span>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="journey-card tilt-3d">
+          <span class="stage-number">05</span>
+          <div class="stage-icon">🗝️</div>
+          <h3 class="stage-title">Finishing & Turnkey Handover</h3>
+          <p class="stage-desc">
+            Master custom millwork, smart-home automation, infinity pool, luxury landscaping, final certificate of occupancy, and white-glove handover with full 10-year structural warranty.
+          </p>
+          <div class="stage-pill-list">
+            <span class="stage-pill">Architectural Millwork & Stone</span>
+            <span class="stage-pill">Complete Smart-Home Integration</span>
+            <span class="stage-pill">Certificate of Occupancy & Keys</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE BEFORE / AFTER SLIDER: PLAN TO REALITY
+       ======================================================================== -->
+  <section class="comparison-section section-padding" id="plan-to-reality">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Precision Execution</span>
+        <h2 class="section-title">From 3D Blueprint to Finished Masterpiece</h2>
+        <p class="section-subtitle">
+          Drag the interactive slider below to inspect how our 3D engineering models translate into finished physical residences.
+        </p>
+      </div>
+
+      <div class="split-slider-wrapper" id="split-slider-container">
+        <!-- Before: Structural & Blueprint -->
+        <div class="split-img-layer before">
+          <img src="assets/images/plan-to-finish.jpg" alt="3D Blueprint and Framing Stage">
+        </div>
+
+        <!-- After: Completed Luxury Villa -->
+        <div class="split-img-layer after" id="split-after-layer">
+          <img src="assets/images/luxury-villa.jpg" alt="Finished Completed Luxury Villa">
+        </div>
+
+        <!-- Drag Handle -->
+        <div class="slider-handle-bar" id="split-slider-handle">
+          <div class="slider-handle-knob">⬌</div>
+        </div>
+
+        <div class="slider-caption-left">◀ 3D BLUEPRINT & STRUCTURAL BUILD</div>
+        <div class="slider-caption-right">TURNKEY FINISHED RESIDENCE ▶</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RAPHAEL — LEAD PROJECT MANAGER SPOTLIGHT
+       ======================================================================== -->
+  <section class="pm-spotlight-section section-padding" id="raphael">
+    <div class="container">
+      <div class="pm-spotlight-grid">
+        
+        <!-- Left: Portrait with 3D Tilt -->
+        <div class="pm-portrait-container">
+          <div class="pm-3d-tilt-frame tilt-3d">
+            <img src="assets/images/raphael-pm.jpg" alt="Raphael Kamau - Lead Project Manager">
+            
+            <div class="pm-live-status">
+              <span class="status-dot-active"></span>
+              <span>Active On-Site • Direct Client Single Point of Contact (Kenya)</span>
+            </div>
+
+            <div class="pm-badge-overlay">
+              <div class="pm-badge-col">
+                <h5>Raphael Kamau</h5>
+                <span>Lead PM & Construction Director</span>
+              </div>
+              <div class="pm-badge-col" style="text-align: right;">
+                <h5>14+ Years</h5>
+                <span>NCA 1 Master Builder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Raphael's Bio, Credentials & PM Pillars -->
+        <div class="pm-bio-col">
+          <span class="pm-tagline">Leadership Spotlight</span>
+          <h2>Meet Raphael Kamau</h2>
+          <p class="pm-role-title">Lead Project Manager • Registered Consulting Civil Engineer • Kenya Land Specialist</p>
+
+          <div class="pm-quote-box">
+            "A build in Kenya should never be an anxiety spiral. When you combine rigorous Ministry of Lands due diligence with strict project management and single-point accountability, magic happens on budget and on schedule."
+          </div>
+
+          <div class="pm-pillars-grid">
+            <div class="pm-pillar-item">
+              <div class="pm-pillar-icon">🔒</div>
+              <h5>Guaranteed Maximum Price</h5>
+              <p>Zero surprise cost overruns. Fixed KSh contracts with milestone transparency.</p>
+            </div>
+            <div class="pm-pillar-item">
+              <div class="pm-pillar-icon">⚡</div>
+              <h5>NCA & County Expediting</h5>
+              <p>Raphael personally navigates county planning, NEMA EIA, and NCA approvals.</p>
+            </div>
+            <div class="pm-pillar-item">
+              <div class="pm-pillar-icon">🚁</div>
+              <h5>Weekly 4K Drone Audits</h5>
+              <p>Diaspora and local clients receive comprehensive digital milestone logs & 3D scans.</p>
+            </div>
+            <div class="pm-pillar-item">
+              <div class="pm-pillar-icon">🏆</div>
+              <h5>White-Glove Handover</h5>
+              <p>Every residence undergoes a 120-point quality audit prior to key delivery.</p>
+            </div>
+          </div>
+
+          <!-- Credentials Chips -->
+          <div class="pm-credentials-list">
+            <span class="cred-chip highlight">PMP® Certified (PMI)</span>
+            <span class="cred-chip highlight">Registered Engineer (EBK / IEK)</span>
+            <span class="cred-chip highlight">NCA 1 Building Contractor</span>
+            <span class="cred-chip">M.Sc. Civil & Structural Eng</span>
+            <span class="cred-chip">LEED AP BD+C</span>
+            <span class="cred-chip">420+ Acres Developed in Kenya</span>
+          </div>
+
+          <div style="display: flex; gap: 0.85rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya." target="_blank" class="btn-whatsapp">
+              <span>💬 WhatsApp Raphael</span>
+            </a>
+            <a href="tel:+254728458468" class="btn-secondary" style="border-color: rgba(37, 211, 102, 0.4); color: #4ade80;">
+              <span>📞 +254 728 458468</span>
+            </a>
+            <button class="btn-primary open-consultation-trigger">
+              Book Strategy Session
+            </button>
+            <a href="#projects" class="btn-secondary">
+              View Portfolio
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE "LAND + BUILD" ESTIMATOR CALCULATOR
+       ======================================================================== -->
+  <section class="estimator-section section-padding" id="estimator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Real-Time Financial Modeling</span>
+        <h2 class="section-title">Calculate Your Land + Build Investment</h2>
+        <p class="section-subtitle">
+          Configure your parcel status, architectural scale, and finish tier to generate a live budget projection and estimated delivery timeline.
+        </p>
+      </div>
+
+      <div class="estimator-box">
+        <div class="estimator-grid">
+          
+          <!-- Left: User Config Controls -->
+          <div class="calc-controls-col">
+            
+            <!-- 1. Land Option -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span>1. Parcel & Land Status</span>
+              </div>
+              <div class="segmented-opts">
+                <button class="seg-btn active" data-land="need_scout">
+                  Need Us to Scout & Buy Land
+                </button>
+                <button class="seg-btn" data-land="has_land">
+                  I Already Own the Parcel
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Location Profile -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span>2. Kenya Location Profile</span>
+              </div>
+              <div class="segmented-opts">
+                <button class="seg-btn active" data-loc="karen">Karen & Muthaiga</button>
+                <button class="seg-btn" data-loc="tigoni">Tigoni & Runda</button>
+                <button class="seg-btn" data-loc="coast">Diani & Kilifi Coast</button>
+                <button class="seg-btn" data-loc="rift">Naivasha & Nanyuki</button>
+              </div>
+            </div>
+
+            <!-- 3. Size Slider -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span>3. Planned Living Area</span>
+                <span class="value-pill" id="sqft-range-val">5,500 sq ft</span>
+              </div>
+              <input type="range" min="2500" max="12000" step="250" value="5500" class="custom-range" id="sqft-range-input">
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; font-family: var(--font-mono);">
+                <span>2,500 sq ft</span>
+                <span>6,000 sq ft</span>
+                <span>12,000 sq ft</span>
+              </div>
+            </div>
+
+            <!-- 4. Finishing Tier -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span>4. Architectural & Finishes Tier</span>
+              </div>
+              <div class="segmented-opts">
+                <button class="seg-btn" data-tier="executive">
+                  Executive Luxury (KSh 7,500/sq ft)
+                </button>
+                <button class="seg-btn active" data-tier="bespoke">
+                  Bespoke Signature (KSh 11,500/sq ft)
+                </button>
+                <button class="seg-btn" data-tier="passive">
+                  Passive Net-Zero (KSh 14,800/sq ft)
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Live Breakdown Summary Card -->
+          <div class="estimate-summary-card">
+            <div>
+              <div class="summary-header">
+                <h4 class="summary-title">Project Investment Summary</h4>
+                <p class="summary-sub">Turnkey Guaranteed Maximum Price in KSh</p>
+              </div>
+
+              <div class="summary-rows">
+                <div class="summary-row">
+                  <span class="label">Land Acquisition & Due Diligence:</span>
+                  <span class="amount" id="est-land-amount">KSh 55,000,000</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">3D BIM Architecture & Approvals:</span>
+                  <span class="amount" id="est-arch-amount">KSh 6,325,000</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Turnkey Construction & Materials:</span>
+                  <span class="amount" id="est-build-amount">KSh 63,250,000</span>
+                </div>
+                <div class="summary-row total-row">
+                  <span class="label">Total Estimated Investment:</span>
+                  <span class="amount" id="est-total-amount">KSh 124,575,000</span>
+                </div>
+              </div>
+
+              <div class="timeline-badge">
+                <span>Target Handover Timeline:</span>
+                <strong id="est-timeline-val">12 - 14 Months</strong>
+              </div>
+            </div>
+
+            <button class="btn-primary" id="btn-export-spec" style="width: 100%; justify-content: center;">
+              Lock In Specification with Raphael Kamau
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED PORTFOLIO PROJECTS (3D Tilt Cards)
+       ======================================================================== -->
+  <section class="portfolio-section section-padding" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Signature Turnkey Deliveries</span>
+        <h2 class="section-title">Curated Architectural Portfolio</h2>
+        <p class="section-subtitle">
+          Every project featured began as raw dirt acquired for our clients and concluded with turnkey handover under Raphael's direct supervision.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-pill active" data-filter="all">All Projects</button>
+        <button class="filter-pill" data-filter="hillside">Hillside Villas</button>
+        <button class="filter-pill" data-filter="coastal">Coastal Estates</button>
+        <button class="filter-pill" data-filter="land">Raw Land Acquisitions</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card tilt-3d" data-category="coastal hillside" data-project-id="solstice">
+          <div class="project-thumbnail-wrapper">
+            <img src="assets/images/luxury-villa.jpg" alt="The Solstice Ridge Villa - Karen, Nairobi">
+            <span class="project-tag-pill">Land Acquired + Full Build</span>
+          </div>
+          <div class="project-content-block">
+            <h3 class="project-title">The Solstice Ridge Villa</h3>
+            <span class="project-location">📍 Miotoni Ridge, Karen, Nairobi</span>
+            
+            <div class="project-metrics-row">
+              <div class="metric-col">
+                <small>Scale</small>
+                <strong>7,400 sq ft</strong>
+              </div>
+              <div class="metric-col">
+                <small>Land Parcel</small>
+                <strong>2.5 Acres</strong>
+              </div>
+              <div class="metric-col">
+                <small>Timeline</small>
+                <strong>14 Months</strong>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="pm-stamp"><span class="check">✔</span> PM Sign-off: Raphael Kamau</span>
+              <span class="view-case-study">View Case Study & Logs ▸</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card tilt-3d" data-category="hillside" data-project-id="auracrest">
+          <div class="project-thumbnail-wrapper">
+            <img src="assets/images/plan-to-finish.jpg" alt="Aura Crest Sanctuary - Tigoni, Kiambu">
+            <span class="project-tag-pill">Volcanic Slope Cantilever</span>
+          </div>
+          <div class="project-content-block">
+            <h3 class="project-title">Aura Crest Sanctuary</h3>
+            <span class="project-location">📍 Tigoni Tea Hills, Kiambu, Kenya</span>
+            
+            <div class="project-metrics-row">
+              <div class="metric-col">
+                <small>Scale</small>
+                <strong>5,800 sq ft</strong>
+              </div>
+              <div class="metric-col">
+                <small>Land Parcel</small>
+                <strong>1.8 Acres</strong>
+              </div>
+              <div class="metric-col">
+                <small>Timeline</small>
+                <strong>11 Months</strong>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="pm-stamp"><span class="check">✔</span> PM Sign-off: Raphael Kamau</span>
+              <span class="view-case-study">View Case Study & Logs ▸</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card tilt-3d" data-category="land" data-project-id="obsidian">
+          <div class="project-thumbnail-wrapper">
+            <img src="assets/images/land-acquisition.jpg" alt="The Obsidian Rift Estate - Naivasha">
+            <span class="project-tag-pill">5-Acre Solar Compound</span>
+          </div>
+          <div class="project-content-block">
+            <h3 class="project-title">The Obsidian Rift Estate</h3>
+            <span class="project-location">📍 Great Rift Valley (Lake Naivasha), Kenya</span>
+            
+            <div class="project-metrics-row">
+              <div class="metric-col">
+                <small>Scale</small>
+                <strong>9,200 sq ft</strong>
+              </div>
+              <div class="metric-col">
+                <small>Land Parcel</small>
+                <strong>5.0 Acres</strong>
+              </div>
+              <div class="metric-col">
+                <small>Timeline</small>
+                <strong>15 Months</strong>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="pm-stamp"><span class="check">✔</span> PM Sign-off: Raphael Kamau</span>
+              <span class="view-case-study">View Case Study & Logs ▸</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card tilt-3d" data-category="coastal" data-project-id="zephyr">
+          <div class="project-thumbnail-wrapper">
+            <img src="assets/images/luxury-villa.jpg" alt="Zephyr Oceanfront Pavilion - Diani Beach">
+            <span class="project-tag-pill">Marine Foundation + Handover</span>
+          </div>
+          <div class="project-content-block">
+            <h3 class="project-title">Zephyr Oceanfront Pavilion</h3>
+            <span class="project-location">📍 Diani Beach (Galu Bluffs), Kwale, Kenya</span>
+            
+            <div class="project-metrics-row">
+              <div class="metric-col">
+                <small>Scale</small>
+                <strong>6,100 sq ft</strong>
+              </div>
+              <div class="metric-col">
+                <small>Land Parcel</small>
+                <strong>2.2 Acres</strong>
+              </div>
+              <div class="metric-col">
+                <small>Timeline</small>
+                <strong>13 Months</strong>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="pm-stamp"><span class="check">✔</span> PM Sign-off: Raphael Kamau</span>
+              <span class="view-case-study">View Case Study & Logs ▸</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CLIENT TESTIMONIALS & TRUST GUARANTEES
+       ======================================================================== -->
+  <section class="testimonials-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Client Validation</span>
+        <h2 class="section-title">Built On Unshakeable Trust</h2>
+        <p class="section-subtitle">
+          Read what private homeowners and investors experience when working with Raphael and Terraform & Craft.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="test-quote">
+              "We lived in London and wanted to buy land in Karen to build our dream home in Kenya. Raphael Kamau scouted the parcel, sent geotechnical 3D drone scans, closed the purchase at Ministry of Lands, and built our 7,400 sq ft home without a single shilling of cost overrun."
+            </p>
+          </div>
+          <div class="client-author-row">
+            <div class="client-avatar-placeholder">MD</div>
+            <div class="client-meta">
+              <h6>Marcus & Diane Sterling</h6>
+              <span>The Solstice Ridge Villa (Karen) • Diaspora Homeowners</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="test-quote">
+              "Raphael Kamau's background in civil engineering and local Kenya ground conditions saved us millions. The Tigoni hillside was extremely steep, yet his foundation design and 3D BIM coordination made the impossible happen ahead of schedule."
+            </p>
+          </div>
+          <div class="client-author-row">
+            <div class="client-avatar-placeholder">KL</div>
+            <div class="client-meta">
+              <h6>Kenzo Lin</h6>
+              <span>Aura Crest Sanctuary (Tigoni) • Tech Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <p class="test-quote">
+              "Having Raphael Kamau as the sole lead project manager from raw soil in Diani to handing over keys was the best decision we made. No finger pointing, no delayed permits, just immaculate craftsmanship."
+            </p>
+          </div>
+          <div class="client-author-row">
+            <div class="client-avatar-placeholder">ER</div>
+            <div class="client-meta">
+              <h6>Elena Rostova</h6>
+              <span>Zephyr Oceanfront Pavilion (Diani) • Private Investor</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div class="footer-brand-col">
+          <div class="brand-wrapper">
+            <div class="brand-logo-cube">TC</div>
+            <div class="brand-text">
+              <span class="brand-title">TERRAFORM & CRAFT</span>
+              <span class="brand-subtitle">KENYA LAND & TURNKEY CONSTRUCTION</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A bespoke architectural design, land acquisition, and general contracting firm delivering world-class turnkey residential and commercial projects across Kenya.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--primary-light);">
+            Lead PM: Eng. Raphael Kamau (PMP®, EBK Registered, NCA 1 Master Builder)
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>The 5 Phases</h5>
+          <ul class="footer-links-list">
+            <li><a href="#lifecycle">01. Land Scouting & Buy</a></li>
+            <li><a href="#lifecycle">02. 3D Architectural BIM</a></li>
+            <li><a href="#lifecycle">03. Groundwork & Foundation</a></li>
+            <li><a href="#lifecycle">04. Structural Framing</a></li>
+            <li><a href="#lifecycle">05. Turnkey Handover</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links-list">
+            <li><a href="#lab">Interactive 3D Lab</a></li>
+            <li><a href="#plan-to-reality">Plan to Reality Slider</a></li>
+            <li><a href="#estimator">Cost & Land Estimator (KSh)</a></li>
+            <li><a href="#projects">Project Gallery</a></li>
+            <li><a href="#raphael">Raphael Kamau's Credentials</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Architectural Studio: Nairobi, Kenya • Karen & Westlands Studios</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>raphael@terraformcraft.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span><a href="tel:+254728458468" style="color: #4ade80; font-weight: 700; font-family: var(--font-mono);">+254 728 458468</a> (Direct PM Line)</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>💬</span>
+            <span><a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya." target="_blank" style="color: #25D366; font-weight: 600;">Chat on WhatsApp (+254 728 458468)</a></span>
+          </div>
+          <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya." target="_blank" class="btn-whatsapp" style="margin-top: 1rem; width: 100%; justify-content: center;">
+            💬 WhatsApp Raphael Now
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Terraform & Craft Construction Ltd. All rights reserved.</span>
+        <span>Registered NCA 1 Master Builder • Engineers Board of Kenya (EBK) • PMP® Credentialed</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CONSULTATION & APPOINTMENT MODAL (Book Raphael)
+       ======================================================================== -->
+  <div class="modal-overlay" id="consultation-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      
+      <div class="modal-header">
+        <h3>Schedule Direct Strategy with Raphael Kamau</h3>
+        <p>Discuss your Kenyan land acquisition requirements, architectural vision, budget in KSh, and delivery schedule.</p>
+        <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="tel:+254728458468" class="phone-quick-link">📞 Call: +254 728 458468</a>
+          <a href="https://wa.me/254728458468?text=Hello%20Raphael,%20I'm%20interested%20in%20a%20land%20acquisition%20and%20turnkey%20construction%20project%20in%20Kenya." target="_blank" class="phone-quick-link" style="color: #25D366; border-color: rgba(37,211,102,0.4);">💬 WhatsApp: +254 728 458468</a>
+        </div>
+      </div>
+
+      <form id="consultation-form">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-input" required placeholder="e.g. David Mwangi">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-input" required placeholder="david@domain.com">
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" class="form-input" required placeholder="+254 700 000000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Scope</label>
+            <select class="form-select" id="modal-project-type">
+              <option value="land_and_build">Scout & Buy Land in Kenya + Full Turnkey Build</option>
+              <option value="build_only">Build on Plot I Already Own in Kenya</option>
+              <option value="land_only">Raw Land Sourcing & Title Due Diligence Only</option>
+              <option value="commercial">Commercial / Gated Estate Turnkey</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Estimated Budget Range (KSh)</label>
+          <select class="form-select">
+            <option>KSh 30,000,000 – KSh 60,000,000</option>
+            <option selected>KSh 60,000,000 – KSh 120,000,000</option>
+            <option>KSh 120,000,000 – KSh 350,000,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Project Vision & Estimator Notes</label>
+          <textarea class="form-textarea" rows="4" id="modal-notes-input" placeholder="Tell Raphael about desired locations (e.g. Karen, Tigoni, Diani, Naivasha), architectural preferences, or land status..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">
+          Confirm Strategy Session with Raphael Kamau
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CASE STUDY MODAL (Project Deep-Dive & Raphael's PM Logs)
+       ======================================================================== -->
+  <div class="modal-overlay" id="case-study-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="case-study-close">&times;</button>
+      
+      <div class="modal-header">
+        <span class="hero-tag lead-pm-tag" style="margin-bottom: 0.5rem;" id="cs-modal-scope">Scope</span>
+        <h3 id="cs-modal-title">Project Title</h3>
+        <p id="cs-modal-location" style="color: var(--primary-light);">Location</p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 1rem 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.85rem;" id="cs-modal-stats">
+        Stats
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" style="color: var(--primary-light);">Raphael's Project Manager Log</label>
+        <p id="cs-modal-diary" style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.6;"></p>
+      </div>
+
+      <div class="form-group" style="margin-top: 1.25rem;">
+        <label class="form-label" style="color: var(--blueprint-light);">Key Engineering & Permitting Feat</label>
+        <p id="cs-modal-pm" style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.6;"></p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <button class="btn-primary open-consultation-trigger" style="width: 100%; justify-content: center;">
+          Inquire About a Similar Build with Raphael
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Alert -->
+  <div class="toast-alert" id="toast-alert">
+    <span>✅</span>
+    <div>
+      <strong>Consultation Confirmed!</strong>
+      <div style="font-size: 0.8rem; color: #94a3b8;">Raphael's office has received your specs and will follow up within 24 hours.</div>
+    </div>
+  </div>
+
+  <!-- App Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/three-scene.js"></script>
+</body>
+</html>
