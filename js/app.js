@@ -172,23 +172,27 @@
   // ==========================================================================
   const estimatorState = {
     landOption: 'need_scout', // 'need_scout' or 'has_land'
-    location: 'karen', // 'karen', 'tigoni', 'coast', 'rift'
+    location: 'karen', // 'karen', 'tigoni', 'coast', 'rift', 'kangundo', 'kitengela', 'juja'
     style: 'minimalist', // 'minimalist', 'brutalist', 'timber', 'mediterranean'
-    sqft: 5500,
-    tier: 'bespoke' // 'executive', 'bespoke', 'passive'
+    sqft: 3500,
+    tier: 'executive' // 'starter', 'executive', 'bespoke', 'passive'
   };
 
   const rates = {
     land: {
-      karen: 55000000,    // KSh 55M prime Karen / Muthaiga 1-acre plot
-      tigoni: 32000000,   // KSh 32M Tigoni / Limuru 1.5-acre plot
-      coast: 42000000,    // KSh 42M Diani / Kilifi Beachfront plot
-      rift: 24000000      // KSh 24M Naivasha / Nanyuki 3-acre parcel
+      karen: 55000000,     // KSh 55M prime Karen / Muthaiga 1-acre plot
+      tigoni: 32000000,    // KSh 32M Tigoni / Limuru 1.5-acre plot
+      coast: 42000000,     // KSh 42M Diani / Kilifi Beachfront plot
+      rift: 24000000,      // KSh 24M Naivasha / Nanyuki 3-acre parcel
+      kangundo: 1200000,   // KSh 1.2M Joska / Malaa (50x100 plot)
+      kitengela: 1800000,  // KSh 1.8M Kitengela / Isinya plot
+      juja: 2200000        // KSh 2.2M Juja Farm / Ruiru East plot
     },
     buildPerSqFt: {
-      executive: 7500,    // KSh 7,500/sq ft (approx KSh 80,000/sqm)
-      bespoke: 11500,     // KSh 11,500/sq ft (approx KSh 124,000/sqm)
-      passive: 14800      // KSh 14,800/sq ft (approx KSh 160,000/sqm)
+      starter: 3600,       // KSh 3,600/sq ft (Affordable modern standard: ~KSh 38,000/sqm)
+      executive: 5800,     // KSh 5,800/sq ft (Executive contemporary: ~KSh 62,000/sqm)
+      bespoke: 11500,      // KSh 11,500/sq ft (Bespoke luxury: ~KSh 124,000/sqm)
+      passive: 14800       // KSh 14,800/sq ft (Passive net-zero: ~KSh 160,000/sqm)
     },
     archPercent: 0.10 // 10% for master architecture, 3D BIM, NEMA & County permits
   };

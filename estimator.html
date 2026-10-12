@@ -25,6 +25,7 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="market-scan.html" class="nav-link">Market Scan & Rates</a></li>
         <li><a href="land-acquisition.html" class="nav-link">Land Scouting</a></li>
         <li><a href="services.html" class="nav-link">The 5 Phases</a></li>
         <li><a href="index.html#lab" class="nav-link">3D Lab</a></li>
@@ -89,13 +90,16 @@
             <!-- 2. Location Profile -->
             <div class="calc-group">
               <div class="calc-label">
-                <span>2. Kenya Development Region</span>
+                <span>2. Kenya Development Region (High Growth & Prime)</span>
               </div>
               <div class="segmented-opts">
-                <button class="seg-btn active" data-loc="karen">Karen & Muthaiga (Nairobi)</button>
-                <button class="seg-btn" data-loc="tigoni">Tigoni & Runda (Kiambu)</button>
-                <button class="seg-btn" data-loc="coast">Diani & Kilifi Coast</button>
-                <button class="seg-btn" data-loc="rift">Naivasha & Nanyuki</button>
+                <button class="seg-btn" data-loc="kangundo">Kangundo Rd / Joska (KSh 1.2M)</button>
+                <button class="seg-btn" data-loc="kitengela">Kitengela & Namanga (KSh 1.8M)</button>
+                <button class="seg-btn" data-loc="juja">Juja Farm / Ruiru (KSh 2.2M)</button>
+                <button class="seg-btn active" data-loc="karen">Karen & Muthaiga (KSh 55M)</button>
+                <button class="seg-btn" data-loc="tigoni">Tigoni & Limuru (KSh 32M)</button>
+                <button class="seg-btn" data-loc="coast">Diani & Kilifi Beach (KSh 42M)</button>
+                <button class="seg-btn" data-loc="rift">Naivasha & Nanyuki (KSh 24M)</button>
               </div>
             </div>
 
@@ -103,12 +107,12 @@
             <div class="calc-group">
               <div class="calc-label">
                 <span>3. Planned Living Area</span>
-                <span class="value-pill" id="sqft-range-val">5,500 sq ft</span>
+                <span class="value-pill" id="sqft-range-val">3,500 sq ft</span>
               </div>
-              <input type="range" min="2500" max="12000" step="250" value="5500" class="custom-range" id="sqft-range-input">
+              <input type="range" min="1000" max="12000" step="250" value="3500" class="custom-range" id="sqft-range-input">
               <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; font-family: var(--font-mono);">
-                <span>2,500 sq ft (~230 sqm)</span>
-                <span>6,000 sq ft (~560 sqm)</span>
+                <span>1,000 sq ft (~93 sqm)</span>
+                <span>3,500 sq ft (~325 sqm)</span>
                 <span>12,000 sq ft (~1,115 sqm)</span>
               </div>
             </div>
@@ -119,10 +123,13 @@
                 <span>4. Architectural & Finishes Tier</span>
               </div>
               <div class="segmented-opts">
-                <button class="seg-btn" data-tier="executive">
-                  Executive Luxury (KSh 7,500/sq ft)
+                <button class="seg-btn" data-tier="starter">
+                  Affordable Standard (KSh 3,600/sq ft)
                 </button>
-                <button class="seg-btn active" data-tier="bespoke">
+                <button class="seg-btn active" data-tier="executive">
+                  Executive Luxury (KSh 5,800/sq ft)
+                </button>
+                <button class="seg-btn" data-tier="bespoke">
                   Bespoke Signature (KSh 11,500/sq ft)
                 </button>
                 <button class="seg-btn" data-tier="passive">
